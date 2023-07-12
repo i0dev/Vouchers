@@ -1,11 +1,11 @@
-package com.i0dev.bosschallenges.entity;
+package com.i0dev.vouchers.entity;
 
 import com.massivecraft.massivecore.MassiveCore;
 import com.massivecraft.massivecore.store.Coll;
 
 public class MConfColl extends Coll<MConf> {
 
-    private static MConfColl i = new MConfColl();
+    private static final MConfColl i = new MConfColl();
 
     public static MConfColl get() {
         return i;

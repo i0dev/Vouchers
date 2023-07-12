@@ -1,6 +1,6 @@
-package com.i0dev.bosschallenges.util;
+package com.i0dev.vouchers.util;
 
-import com.i0dev.bosschallenges.entity.MLang;
+import com.i0dev.vouchers.entity.MLang;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;

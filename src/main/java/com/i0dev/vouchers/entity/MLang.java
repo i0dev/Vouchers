@@ -1,4 +1,4 @@
-package com.i0dev.bosschallenges.entity;
+package com.i0dev.vouchers.entity;
 
 import com.massivecraft.massivecore.command.editor.annotation.EditorName;
 import com.massivecraft.massivecore.store.Entity;
@@ -12,7 +12,10 @@ public class MLang extends Entity<MLang> {
         return i;
     }
 
-    public String prefix = "&8[&5BossChallenges&8]&7";
+    public String prefix = "&8[&cVouchers&8]&7";
+    public String gaveVoucher = "%prefix% &7You have given &c%player% &7a %voucher% voucher.";
+    public String usedVoucher = "%prefix% &7You have used a %voucher% voucher.";
+    public String failedPermission = "%prefix% &7It looks like you already have the contents of this voucher.";
 
     @Override
     public MLang load(MLang that) {

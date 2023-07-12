@@ -1,36 +1,34 @@
-package com.i0dev.bosschallenges.cmd.type;
+package com.i0dev.vouchers.cmd.type;
 
-import com.i0dev.bosschallenges.entity.ActivePortal;
-import com.i0dev.bosschallenges.entity.ActivePortalColl;
-import com.i0dev.bosschallenges.entity.ChallengeItemConf;
-import com.i0dev.bosschallenges.entity.ChallengeItemConfColl;
+import com.i0dev.vouchers.entity.Voucher;
+import com.i0dev.vouchers.entity.VoucherColl;
 import com.massivecraft.massivecore.command.type.TypeAbstractChoice;
 import org.bukkit.command.CommandSender;
 
 import java.util.Collection;
 
-public class TypeActivePortal extends TypeAbstractChoice<ActivePortal> {
+public class TypeVoucher extends TypeAbstractChoice<Voucher> {
 
-    private static final TypeActivePortal i = new TypeActivePortal();
+    private static final TypeVoucher i = new TypeVoucher();
 
-    public static TypeActivePortal get() {
+    public static TypeVoucher get() {
         return i;
     }
 
-    public TypeActivePortal() {
-        super(ActivePortal.class);
+    public TypeVoucher() {
+        super(Voucher.class);
     }
 
     public String getName() {
         return "text";
     }
 
-    public ActivePortal read(String arg, CommandSender sender) {
-        return ActivePortal.get(arg);
+    public Voucher read(String arg, CommandSender sender) {
+        return Voucher.get(arg);
     }
 
     public Collection<String> getTabList(CommandSender sender, String arg) {
-        return ActivePortalColl.get().getIds();
+        return VoucherColl.get().getIds();
     }
 }
 

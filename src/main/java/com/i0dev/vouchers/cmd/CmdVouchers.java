@@ -1,29 +1,27 @@
-package com.i0dev.bosschallenges.cmd;
+package com.i0dev.vouchers.cmd;
 
-import com.i0dev.bosschallenges.BossChallengesPlugin;
-import com.i0dev.bosschallenges.Perm;
-import com.i0dev.bosschallenges.entity.MConf;
+import com.i0dev.vouchers.Perm;
+import com.i0dev.vouchers.VouchersPlugin;
+import com.i0dev.vouchers.entity.MConf;
 import com.massivecraft.massivecore.command.MassiveCommandVersion;
 import com.massivecraft.massivecore.command.requirement.RequirementHasPerm;
 
 import java.util.List;
 
-public class CmdBossChallenge extends BossChallengeCommand {
+public class CmdVouchers extends VouchersCommand {
 
-    private static CmdBossChallenge i = new CmdBossChallenge();
+    private static CmdVouchers i = new CmdVouchers();
 
-    public static CmdBossChallenge get() {
+    public static CmdVouchers get() {
         return i;
     }
 
-    public CmdBossChallengeGive cmdFactionsGive = new CmdBossChallengeGive();
-    public CmdBossChallengeToggle cmdBossChallengeToggle = new CmdBossChallengeToggle();
-    public CmdBossChallengeStop cmdBossChallengeStop = new CmdBossChallengeStop();
-    public MassiveCommandVersion cmdFactionsVersion = new MassiveCommandVersion(BossChallengesPlugin.get()).setAliases("v", "version").addRequirements(RequirementHasPerm.get(Perm.VERSION));
+    public CmdVouchersGive cmdVouchersGive = new CmdVouchersGive();
+    public MassiveCommandVersion cmdFactionsVersion = new MassiveCommandVersion(VouchersPlugin.get()).setAliases("v", "version").addRequirements(RequirementHasPerm.get(Perm.VERSION));
 
     @Override
     public List<String> getAliases() {
-        return MConf.get().aliasesGrindTools;
+        return MConf.get().aliases;
     }
 
 }

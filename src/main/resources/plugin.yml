@@ -1,26 +1,26 @@
 name: ${project.name}
 version: ${project.version}
-main: com.i0dev.bosschallenges.BossChallengesPlugin
+main: com.i0dev.vouchers.VouchersPlugin
 website: ${project.url}
 authors: [ i01 ]
-depend: [ MassiveCore, HolographicDisplays, WorldEdit, PlaceholderAPI, ProtocolLib ]
+depend: [ MassiveCore ]
 description: ${project.description}
-api-version: 1.15
+api-version: 1.19
 permissions:
-  bosschallenges.basecommand: { description: bosschallenges basecommand, default: false }
-  bosschallenges.version: { description: check version, default: false }
-  bosschallenges.*:
-    bosschallenges.basecommand: true
-    bosschallenges.version: true
-  bosschallenges.kit.op:
+  vouchers.basecommand: { description: vouchers basecommand, default: false }
+  vouchers.version: { description: check version, default: false }
+  vouchers.*:
+    vouchers.basecommand: true
+    vouchers.version: true
+  vouchers.kit.op:
     default: op
     children:
-      bosschallenges.*: true
-  bosschallenges.kit.rank0:
+      vouchers.*: true
+  vouchers.kit.rank0:
     default: false
     children:
-      bosschallenges.basecommand: true
-  bosschallenges.kit.default:
+      vouchers.basecommand: true
+  vouchers.kit.default:
     default: true
     children:
-      bosschallenges.kit.rank0: true
+      vouchers.kit.rank0: true

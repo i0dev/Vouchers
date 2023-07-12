@@ -1,12 +1,12 @@
-package com.i0dev.bosschallenges.entity;
+package com.i0dev.vouchers.entity;
 
 import com.massivecraft.massivecore.store.Coll;
 
-public class ChallengeItemConfColl extends Coll<ChallengeItemConf> {
+public class VoucherColl extends Coll<Voucher> {
 
-    private static final ChallengeItemConfColl i = new ChallengeItemConfColl();
+    private static final VoucherColl i = new VoucherColl();
 
-    public static ChallengeItemConfColl get() {
+    public static VoucherColl get() {
         return i;
     }
 

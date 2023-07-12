@@ -1,11 +1,11 @@
-package com.i0dev.bosschallenges.entity;
+package com.i0dev.vouchers.entity;
 
 import com.massivecraft.massivecore.MassiveCore;
 import com.massivecraft.massivecore.store.Coll;
 
 public class MLangColl extends Coll<MLang> {
 
-    private static MLangColl i = new MLangColl();
+    private static final MLangColl i = new MLangColl();
 
     public static MLangColl get() {
         return i;
