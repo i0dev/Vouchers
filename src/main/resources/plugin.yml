@@ -1,0 +1,26 @@
+name: ${project.name}
+version: ${project.version}
+main: com.i0dev.bosschallenges.BossChallengesPlugin
+website: ${project.url}
+authors: [ i01 ]
+depend: [ MassiveCore, HolographicDisplays, WorldEdit, PlaceholderAPI, ProtocolLib ]
+description: ${project.description}
+api-version: 1.15
+permissions:
+  bosschallenges.basecommand: { description: bosschallenges basecommand, default: false }
+  bosschallenges.version: { description: check version, default: false }
+  bosschallenges.*:
+    bosschallenges.basecommand: true
+    bosschallenges.version: true
+  bosschallenges.kit.op:
+    default: op
+    children:
+      bosschallenges.*: true
+  bosschallenges.kit.rank0:
+    default: false
+    children:
+      bosschallenges.basecommand: true
+  bosschallenges.kit.default:
+    default: true
+    children:
+      bosschallenges.kit.rank0: true
